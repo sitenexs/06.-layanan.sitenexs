@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Layanan & Solusi Bisnis Sitenexs | Katalog, Kasir, Presensi & Keuangan</title>
+    <meta name="description" content="Jelajahi berbagai layanan digital Sitenexs mulai dari website profil UMKM, sistem kasir (POS), presensi karyawan GPS, hingga aplikasi laporan keuangan.">
+    <meta name="keywords" content="layanan Sitenexs, aplikasi kasir, presensi karyawan, laporan keuangan, website UMKM, qr code order, Sitenexs">
+    <meta name="author" content="Sitenexs">
+    <meta name="language" content="id-ID">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="canonical" content="https://account.sitenexs.site/layanan">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Pilih Layanan & Solusi Bisnis Sitenexs">
+    <meta property="og:description" content="Temukan solusi digital terbaik untuk mendigitalkan dan mengembangkan usaha Anda bersama Sitenexs.">
+    <meta property="og:site_name" content="Sitenexs">
+    <meta property="og:url" content="https://account.sitenexs.site/layanan">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Sitenexs">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FY8W3CJKFL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FY8W3CJKFL');
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://sitenexs.site/assets/favicon/favicon.png">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --primary-glow: rgba(37, 99, 235, 0.15);
+            --accent: #10b981;
+            
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            
+            --border-subtle: #e2e8f0;
+            --border-focus: #3b82f6;
+            
+            --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+            --shadow-hover: 0 20px 35px -5px rgba(37, 99, 235, 0.12), 0 8px 12px -6px rgba(15, 23, 42, 0.08);
+            
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            
+            --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.04) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.03) 0px, transparent 50%);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Navbar Style ala Website Utama */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.875rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .logo-text {
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-img {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-nav-outline {
+            padding: 0.5rem 0.9rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            background: transparent;
+        }
+
+        .btn-nav-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background-color: var(--primary-light);
+        }
+
+        .btn-nav-primary {
+            padding: 0.5rem 0.9rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: var(--primary);
+            border-radius: var(--radius-md);
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-nav-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Container Utama */
+        .main-wrapper {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2.5rem 1rem;
+            animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header / Judul Halaman */
+        .page-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .page-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Grid Layanan */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: #cbd5e1;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            background-color: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon-wrapper {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .service-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-desc {
+            font-size: 0.825rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.65rem 1rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+            text-align: center;
+            width: 100%;
+            font-family: inherit;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--border-subtle);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background-color: var(--primary-light);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 14px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
+            padding: 2rem 1rem;
+            border-top: 1px solid var(--border-subtle);
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 100%;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Responsif untuk Layar Kecil */
+        @media(max-width: 640px) {
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Website -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="https://sitenexs.site" class="logo">
+                <img src="https://sitenexs.site/assets/logo/logo.png" alt="Sitenexs Logo" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">Sitenexs</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="https://sitenexs.site" class="nav-link">Beranda</a>
+                <a href="layanan.html" class="nav-link active">Layanan</a>
+                <a href="https://sitenexs.site/#fitur" class="nav-link">Fitur</a>
+                <a href="https://sitenexs.site/#kontak" class="nav-link">Kontak</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="sign-in.html" class="btn-nav-outline">Masuk</a>
+                <a href="register.html" class="btn-nav-primary">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <div class="main-wrapper">
+        <header class="page-header">
+            <h1 class="page-title">Pilih Layanan Bisnis Anda</h1>
+            <p class="page-desc">Maksimalkan operasional usaha Anda dengan rangkaian sistem digital profesional dari Sitenexs.</p>
+        </header>
+
+        <!-- Daftar Layanan / Grid -->
+        <main class="services-grid">
+            <!-- 1. Katalog / Website UMKM -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h2 class="service-title">Website Profil & Katalog UMKM</h2>
+                    <p class="service-desc">Buat profil bisnis dan katalog produk interaktif secara online untuk menjangkau lebih banyak pelanggan dan memperluas pasar.</p>
+                </div>
+                <a href="katalog.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-right"></i> Akses Katalog
+                </a>
+            </div>
+
+            <!-- 2. Sistem Presensi GPS -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <h2 class="service-title">Presensi Karyawan (GPS)</h2>
+                    <p class="service-desc">Kelola kehadiran dan absensi tim atau karyawan secara real-time berbasis lokasi GPS dan validasi perangkat yang akurat.</p>
+                </div>
+                <a href="https://presensi.sitenexs.site" target="_blank" class="btn btn-outline">
+                    <i class="fas fa-external-link-alt"></i> Buka Presensi
+                </a>
+            </div>
+
+            <!-- 3. Aplikasi Kasir POS -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <h2 class="service-title">Aplikasi Kasir / POS Toko</h2>
+                    <p class="service-desc">Sistem pencatatan transaksi penjualan, manajemen inventori produk, dan struk digital yang cepat serta mudah digunakan.</p>
+                </div>
+                <a href="kasir.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-right"></i> Buka Kasir
+                </a>
+            </div>
+
+            <!-- 4. QR Code / Booking System -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h2 class="service-title">Menu QR Code & Booking</h2>
+                    <p class="service-desc">Solusi pemesanan mandiri (self-order) restoran dan sistem reservasi meja berbasis QR Code yang efisien untuk pelanggan.</p>
+                </div>
+                <a href="https://usahaweb.sitenexs.site/order" target="_blank" class="btn btn-outline">
+                    <i class="fas fa-external-link-alt"></i> Buka Sistem Order
+                </a>
+            </div>
+
+            <!-- 5. Laporan Keuangan -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h2 class="service-title">Website Laporan Keuangan</h2>
+                    <p class="service-desc">Pantau arus kas, laba rugi, dan rekapitulasi keuangan usaha secara otomatis, rapi, dan transparan setiap hari.</p>
+                </div>
+                <a href="laporan-keuangan.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-right"></i> Buka Keuangan
+                </a>
+            </div>
+
+            <!-- 6. Dashboard Utama / Akun -->
+            <div class="service-card" style="background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); border-color: #bfdbfe;">
+                <div>
+                    <div class="service-icon-wrapper" style="background-color: #2563eb; color: #ffffff;">
+                        <i class="fas fa-user-gear"></i>
+                    </div>
+                    <h2 class="service-title">Kelola Akun & Dashboard</h2>
+                    <p class="service-desc">Masuk ke pusat kendali akun Anda untuk memperbarui profil, langganan layanan, dan pengaturan sistem Sitenexs lainnya.</p>
+                </div>
+                <a href="sign-in.html" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Masuk Akun
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-links">
+            <a href="https://sitenexs.site">Beranda Utama</a>
+            <a href="sign-in.html">Masuk</a>
+            <a href="register.html">Daftar</a>
+        </div>
+        <p>&copy; 2026 Sitenexs. Seluruh hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>
