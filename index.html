@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilih Layanan & Solusi Bisnis Sitenexs | Katalog, Kasir, Presensi & Keuangan</title>
-    <meta name="description" content="Jelajahi berbagai layanan digital Sitenexs mulai dari website profil UMKM, sistem kasir (POS), presensi karyawan GPS, hingga aplikasi laporan keuangan.">
-    <meta name="keywords" content="layanan Sitenexs, aplikasi kasir, presensi karyawan, laporan keuangan, website UMKM, qr code order, Sitenexs">
+    <title>Layanan Digital Bisnis Sitenexs | Website, Kasir, Presensi & Keuangan</title>
+    <meta name="description" content="Temukan layanan digital Sitenexs untuk bisnis, mulai dari pembuatan website, kasir POS, presensi karyawan GPS, pemesanan QR Code, hingga laporan keuangan.">
     <meta name="author" content="Sitenexs">
     <meta name="language" content="id-ID">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="theme-color" content="#2563eb">
-    <meta name="canonical" content="https://account.sitenexs.site/layanan">
+    <link rel="canonical" href="https://layanan.sitenexs.site/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:title" content="Pilih Layanan & Solusi Bisnis Sitenexs">
-    <meta property="og:description" content="Temukan solusi digital terbaik untuk mendigitalkan dan mengembangkan usaha Anda bersama Sitenexs.">
+    <meta property="og:title" content="Layanan Digital Bisnis Sitenexs">
+    <meta property="og:description" content="Website, kasir POS, presensi karyawan GPS, pemesanan QR Code, dan laporan keuangan untuk membantu bisnis Anda bekerja lebih mudah secara digital.">
     <meta property="og:site_name" content="Sitenexs">
-    <meta property="og:url" content="https://account.sitenexs.site/layanan">
+    <meta property="og:url" content="https://layanan.sitenexs.site/">
     <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Sitenexs">
@@ -32,7 +31,7 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://sitenexs.site/assets/favicon/favicon.png">
+    <link rel="icon" type="image/png" href="https://sitenexs.site/assets/favicon/favicon.png" width="32" height="32">
 
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +40,60 @@
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Sitenexs Layanan",
+      "url": "https://layanan.sitenexs.site/",
+      "description": "Layanan digital Sitenexs untuk digitalisasi bisnis UMKM.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sitenexs",
+        "url": "https://sitenexs.site"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Website Profil & Katalog UMKM",
+          "url": "https://layanan.sitenexs.site/katalog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Presensi Karyawan (GPS)",
+          "url": "https://presensi.sitenexs.site"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Aplikasi Kasir / POS Toko",
+          "url": "https://layanan.sitenexs.site/kasir.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Menu QR Code & Booking",
+          "url": "https://usahaweb.sitenexs.site/order"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Website Laporan Keuangan",
+          "url": "https://layanan.sitenexs.site/laporan-keuangan.html"
+        }
+      ]
+    }
+    </script>
 
     <style>
         :root {
@@ -93,7 +146,7 @@
             transition: var(--transition);
         }
 
-        /* Navbar Style ala Website Utama */
+        /* Navbar Style */
         .navbar {
             background-color: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
@@ -217,19 +270,19 @@
         }
 
         .page-title {
-            font-size: 1.85rem;
+            font-size: 2.1rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             color: var(--text-main);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .page-desc {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* Grid Layanan */
@@ -237,7 +290,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3.5rem;
         }
 
         .service-card {
@@ -289,7 +342,28 @@
             font-size: 0.825rem;
             color: var(--text-muted);
             line-height: 1.5;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-features {
+            list-style: none;
             margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .service-features li {
+            font-size: 0.8125rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li i {
+            color: var(--accent);
+            font-size: 0.75rem;
         }
 
         .btn {
@@ -333,34 +407,236 @@
             box-shadow: 0 5px 14px rgba(37, 99, 235, 0.3);
         }
 
-        /* Footer */
-        .page-footer {
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
             text-align: center;
-            font-size: 0.75rem;
-            color: var(--text-muted);
+            color: #ffffff;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .cta-desc {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 550px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-primary {
+            background-color: #ffffff;
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-cta-primary:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-1px);
+        }
+
+        .btn-cta-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+        }
+
+        .btn-cta-secondary:hover {
+            border-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-grid {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
-            align-items: center;
-            padding: 2rem 1rem;
-            border-top: 1px solid var(--border-subtle);
-            background-color: rgba(255, 255, 255, 0.5);
-            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .footer-links {
+        .faq-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item[open] {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.05);
+        }
+
+        .faq-question {
+            padding: 1rem 1.25rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            cursor: pointer;
             display: flex;
-            gap: 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
         }
 
-        .footer-links a:hover {
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-question::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .faq-item[open] .faq-question::after {
+            transform: rotate(180deg);
             color: var(--primary);
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Footer Style */
+        .page-footer {
+            border-top: 1px solid var(--border-subtle);
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 100%;
+            padding: 3rem 1rem 2rem;
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-brand {
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.8125rem;
+            line-height: 1.5;
+        }
+
+        .footer-nav-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-nav-title {
+            font-weight: 700;
+            color: var(--text-main);
+            font-size: 0.875rem;
+        }
+
+        .footer-nav-col a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-subtle);
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         /* Responsif untuk Layar Kecil */
         @media(max-width: 640px) {
             .nav-menu {
                 display: none;
+            }
+            .page-title {
+                font-size: 1.75rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-section {
+                padding: 2rem 1.25rem;
+            }
+            .cta-title {
+                font-size: 1.4rem;
+            }
+            .cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .cta-actions a {
+                width: 100%;
+            }
+            .footer-top {
+                flex-direction: column;
+                gap: 1.5rem;
             }
         }
     </style>
@@ -371,13 +647,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="https://sitenexs.site" class="logo">
-                <img src="https://sitenexs.site/assets/logo/logo.png" alt="Sitenexs Logo" class="logo-img" onerror="this.style.display='none'">
+                <img src="https://sitenexs.site/assets/logo/logo.png" alt="Sitenexs Logo" class="logo-img" onerror="this.style.display='none'" width="32" height="32">
                 <span class="logo-text">Sitenexs</span>
             </a>
             
             <div class="nav-menu">
                 <a href="https://sitenexs.site" class="nav-link">Beranda</a>
-                <a href="layanan.html" class="nav-link active">Layanan</a>
+                <a href="https://layanan.sitenexs.site/" class="nav-link active">Layanan</a>
                 <a href="https://sitenexs.site/#fitur" class="nav-link">Fitur</a>
                 <a href="https://sitenexs.site/#kontak" class="nav-link">Kontak</a>
             </div>
@@ -392,106 +668,204 @@
     <!-- Konten Utama -->
     <div class="main-wrapper">
         <header class="page-header">
-            <h1 class="page-title">Pilih Layanan Bisnis Anda</h1>
-            <p class="page-desc">Maksimalkan operasional usaha Anda dengan rangkaian sistem digital profesional dari Sitenexs.</p>
+            <h1 class="page-title">Layanan Digital untuk Bisnis</h1>
+            <p class="page-desc">Sitenexs menyediakan berbagai solusi digital untuk membantu UMKM dan bisnis mengelola operasional, penjualan, pelanggan, dan keuangan dengan lebih mudah.</p>
         </header>
 
         <!-- Daftar Layanan / Grid -->
         <main class="services-grid">
             <!-- 1. Katalog / Website UMKM -->
-            <div class="service-card">
+            <article class="service-card">
                 <div>
                     <div class="service-icon-wrapper">
-                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-globe" aria-hidden="true"></i>
                     </div>
                     <h2 class="service-title">Website Profil & Katalog UMKM</h2>
-                    <p class="service-desc">Buat profil bisnis dan katalog produk interaktif secara online untuk menjangkau lebih banyak pelanggan dan memperluas pasar.</p>
+                    <p class="service-desc">Bangun kehadiran online bisnis dengan website profil dan katalog produk yang dapat diakses pelanggan kapan saja.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Profil bisnis online profesional</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Katalog produk interaktif</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Mudah dibagikan ke pelanggan</li>
+                    </ul>
                 </div>
                 <a href="katalog.html" class="btn btn-outline">
-                    <i class="fas fa-arrow-right"></i> Akses Katalog
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Akses Katalog
                 </a>
-            </div>
+            </article>
 
             <!-- 2. Sistem Presensi GPS -->
-            <div class="service-card">
+            <article class="service-card">
                 <div>
                     <div class="service-icon-wrapper">
-                        <i class="fas fa-location-dot"></i>
+                        <i class="fas fa-location-dot" aria-hidden="true"></i>
                     </div>
                     <h2 class="service-title">Presensi Karyawan (GPS)</h2>
                     <p class="service-desc">Kelola kehadiran dan absensi tim atau karyawan secara real-time berbasis lokasi GPS dan validasi perangkat yang akurat.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Validasi lokasi GPS akurat</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Rekap absensi otomatis</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Pantau kinerja tim lapangan</li>
+                    </ul>
                 </div>
-                <a href="https://presensi.sitenexs.site" target="_blank" class="btn btn-outline">
-                    <i class="fas fa-external-link-alt"></i> Buka Presensi
+                <a href="https://presensi.sitenexs.site" target="_blank" rel="noopener" class="btn btn-outline">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Buka Presensi
                 </a>
-            </div>
+            </article>
 
             <!-- 3. Aplikasi Kasir POS -->
-            <div class="service-card">
+            <article class="service-card">
                 <div>
                     <div class="service-icon-wrapper">
-                        <i class="fas fa-cash-register"></i>
+                        <i class="fas fa-cash-register" aria-hidden="true"></i>
                     </div>
                     <h2 class="service-title">Aplikasi Kasir / POS Toko</h2>
                     <p class="service-desc">Sistem pencatatan transaksi penjualan, manajemen inventori produk, dan struk digital yang cepat serta mudah digunakan.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Transaksi penjualan cepat</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Manajemen stok barang</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Laporan harian praktis</li>
+                    </ul>
                 </div>
                 <a href="kasir.html" class="btn btn-outline">
-                    <i class="fas fa-arrow-right"></i> Buka Kasir
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Buka Kasir
                 </a>
-            </div>
+            </article>
 
             <!-- 4. QR Code / Booking System -->
-            <div class="service-card">
+            <article class="service-card">
                 <div>
                     <div class="service-icon-wrapper">
-                        <i class="fas fa-qrcode"></i>
+                        <i class="fas fa-qrcode" aria-hidden="true"></i>
                     </div>
                     <h2 class="service-title">Menu QR Code & Booking</h2>
                     <p class="service-desc">Solusi pemesanan mandiri (self-order) restoran dan sistem reservasi meja berbasis QR Code yang efisien untuk pelanggan.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Pesan menu via scan meja</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Mengurangi antrean kasir</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Reservasi meja praktis</li>
+                    </ul>
                 </div>
-                <a href="https://usahaweb.sitenexs.site/order" target="_blank" class="btn btn-outline">
-                    <i class="fas fa-external-link-alt"></i> Buka Sistem Order
+                <a href="https://usahaweb.sitenexs.site/order" target="_blank" rel="noopener" class="btn btn-outline">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Buka Sistem Order
                 </a>
-            </div>
+            </article>
 
             <!-- 5. Laporan Keuangan -->
-            <div class="service-card">
+            <article class="service-card">
                 <div>
                     <div class="service-icon-wrapper">
-                        <i class="fas fa-chart-pie"></i>
+                        <i class="fas fa-chart-pie" aria-hidden="true"></i>
                     </div>
                     <h2 class="service-title">Website Laporan Keuangan</h2>
                     <p class="service-desc">Pantau arus kas, laba rugi, dan rekapitulasi keuangan usaha secara otomatis, rapi, dan transparan setiap hari.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Pantau arus kas real-time</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Rekap laba rugi otomatis</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Keuangan bisnis lebih teratur</li>
+                    </ul>
                 </div>
                 <a href="laporan-keuangan.html" class="btn btn-outline">
-                    <i class="fas fa-arrow-right"></i> Buka Keuangan
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i> Buka Keuangan
                 </a>
-            </div>
+            </article>
 
             <!-- 6. Dashboard Utama / Akun -->
-            <div class="service-card" style="background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); border-color: #bfdbfe;">
+            <article class="service-card" style="background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); border-color: #bfdbfe;">
                 <div>
                     <div class="service-icon-wrapper" style="background-color: #2563eb; color: #ffffff;">
-                        <i class="fas fa-user-gear"></i>
+                        <i class="fas fa-user-gear" aria-hidden="true"></i>
                     </div>
                     <h2 class="service-title">Kelola Akun & Dashboard</h2>
                     <p class="service-desc">Masuk ke pusat kendali akun Anda untuk memperbarui profil, langganan layanan, dan pengaturan sistem Sitenexs lainnya.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Pusat kendali akun terpusat</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Pengaturan langganan layanan</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Keamanan akun terjamin</li>
+                    </ul>
                 </div>
                 <a href="sign-in.html" class="btn btn-primary">
-                    <i class="fas fa-sign-in-alt"></i> Masuk Akun
+                    <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Masuk Akun
                 </a>
-            </div>
+            </article>
         </main>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2 class="cta-title">Siap Mengembangkan Bisnis Secara Digital?</h2>
+            <p class="cta-desc">Mulai gunakan solusi digital Sitenexs untuk membantu mengelola bisnis dengan lebih praktis.</p>
+            <div class="cta-actions">
+                <a href="sign-in.html" class="btn-cta-primary">Mulai Sekarang</a>
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="btn-cta-secondary">Lihat Layanan</a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="faq-header">
+                <h2 class="faq-title">Pertanyaan yang Sering Diajukan</h2>
+                <p class="page-desc">Temukan informasi seputar layanan digital Sitenexs.</p>
+            </div>
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary class="faq-question">Apa saja layanan yang tersedia di Sitenexs?</summary>
+                    <div class="faq-answer">Sitenexs menyediakan berbagai layanan digital untuk bisnis meliputi pembuatan website profil UMKM, sistem kasir POS, presensi karyawan berbasis GPS, sistem pemesanan menu QR Code, serta aplikasi laporan keuangan.</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Apakah Sitenexs cocok untuk UMKM?</summary>
+                    <div class="faq-answer">Ya, seluruh layanan Sitenexs dirancang khusus agar mudah digunakan, ringan, dan terjangkau untuk membantu proses digitalisasi berbagai skala usaha mikro, kecil, dan menengah.</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Apakah layanan Sitenexs bisa digunakan melalui HP?</summary>
+                    <div class="faq-answer">Tentu saja. Semua sistem dan website dari Sitenexs bersifat responsif serta dioptimalkan agar nyaman diakses menggunakan smartphone, tablet, maupun komputer.</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Apa itu sistem kasir POS Sitenexs?</summary>
+                    <div class="faq-answer">Aplikasi kasir POS Sitenexs adalah perangkat lunak berbasis web untuk mencatat transaksi penjualan harian, mengelola stok produk, dan memudahkan rekapitulasi toko secara cepat.</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Apa fungsi presensi karyawan berbasis GPS?</summary>
+                    <div class="faq-answer">Presensi berbasis GPS berfungsi untuk mencatat kehadiran karyawan secara real-time dengan validasi titik lokasi akurat, sehingga cocok untuk manajemen tim kantor maupun lapangan.</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Apa fungsi pemesanan menggunakan QR Code?</summary>
+                    <div class="faq-answer">Sistem pemesanan QR Code memungkinkan pelanggan restoran atau kafe untuk melihat menu, memesan makanan langsung dari meja mereka secara mandiri, dan mempercepat proses pelayanan.</div>
+                </details>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
     <footer class="page-footer">
-        <div class="footer-links">
-            <a href="https://sitenexs.site">Beranda Utama</a>
-            <a href="sign-in.html">Masuk</a>
-            <a href="register.html">Daftar</a>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="https://sitenexs.site" class="logo">
+                        <img src="https://sitenexs.site/assets/logo/logo.png" alt="Sitenexs Logo" class="logo-img" onerror="this.style.display='none'" width="32" height="32">
+                        <span class="logo-text">Sitenexs</span>
+                    </a>
+                    <p>Solusi digital untuk membantu bisnis bekerja lebih mudah.</p>
+                </div>
+                <div class="footer-nav-col">
+                    <span class="footer-nav-title">Menu Utama</span>
+                    <a href="https://sitenexs.site">Beranda</a>
+                    <a href="https://layanan.sitenexs.site/">Layanan</a>
+                    <a href="https://sitenexs.site/#fitur">Fitur</a>
+                    <a href="https://sitenexs.site/#kontak">Kontak</a>
+                </div>
+                <div class="footer-nav-col">
+                    <span class="footer-nav-title">Akun</span>
+                    <a href="sign-in.html">Masuk</a>
+                    <a href="register.html">Daftar</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sitenexs. Seluruh hak cipta dilindungi.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://sitenexs.site">Kebijakan Privasi</a>
+                    <a href="https://sitenexs.site">Syarat & Ketentuan</a>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2026 Sitenexs. Seluruh hak cipta dilindungi.</p>
     </footer>
 
 </body>
