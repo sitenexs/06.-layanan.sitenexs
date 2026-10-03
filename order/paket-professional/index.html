@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Professional | Pesan Dari Meja - Sitenexs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="https://sitenexs.site/assets/favicon/favicon.png">
+    <link rel="canonical" href="https://usahaweb.sitenexs.site/paket-profesional.html">
+
+    <meta name="description" content="Detail lengkap Paket Professional sistem QR Order Pesan Dari Meja untuk cafe dan restoran Anda bersama Sitenexs UsahaWeb.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-subtle: #e2e8f0;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-full: 9999px;
+            --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 4%;
+        }
+
+        .nav-brand {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--border-subtle);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        /* Main Container */
+        .detail-section {
+            padding: 7rem 4% 3rem 4%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        @media(max-width: 968px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card Container style */
+        .card-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-content h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .detail-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.65rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .detail-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .features-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.85rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            font-size: 0.8rem;
+            background: var(--bg-body);
+            padding: 0.75rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .features-list li i {
+            color: var(--success);
+            font-size: 0.95rem;
+            margin-top: 0.1rem;
+        }
+
+        .features-list li div strong {
+            display: block;
+            margin-bottom: 0.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .features-list li div span {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+
+        /* Checkout Card Sidebar */
+        .checkout-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 5rem;
+        }
+
+        .checkout-card h3 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        .checkout-price {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 1rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.2rem;
+        }
+
+        .checkout-price span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .checkout-perks {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 1rem 0;
+        }
+
+        .checkout-perks li {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .checkout-perks li i {
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-align: center;
+            justify-content: center;
+        }
+
+        .guarantee i {
+            color: var(--success);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 2rem 4%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav>
+        <a href="https://sitenexs.site/" class="nav-brand"><i class="fas fa-utensils"></i>Sitenexs UsahaWeb</a>
+        <a href="https://usahaweb.sitenexs.site/paketOrder.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Kembali</a>
+    </nav>
+
+    <!-- Detail Section -->
+    <section class="detail-section">
+        <div class="breadcrumb">
+            <a href="https://usahaweb.sitenexs.site/paketOrder.html">Pilih Paket</a>
+            <i class="fas fa-chevron-right" style="font-size: 0.6rem;"></i>
+            <span>Paket Professional</span>
+        </div>
+
+        <div class="detail-grid">
+            <!-- Informasi Paket dalam Bentuk Card Grid -->
+            <div class="detail-content">
+                <div class="card-box">
+                    <div class="detail-badge"><i class="fas fa-crown"></i> Paling Populer</div>
+                    <h1>Paket Professional Sitenexs QR Order</h1>
+                    <p class="detail-desc">Ideal untuk cafe menengah, coffee shop populer, dan restoran yang ingin mempercepat alur operasional, memangkas antrean kasir, serta memberikan pengalaman pemesanan modern bagi pelanggan.</p>
+                </div>
+
+                <div class="card-box">
+                    <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem;"><i class="fas fa-list-check" style="color: var(--primary); margin-right: 0.4rem;"></i> Fitur Unggulan Paket Ini</h3>
+                    <ul class="features-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Sistem QR Order Meja</strong>
+                                <span>Maks. 30 Meja dengan manajemen fleksibel.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Dashboard Real-time</strong>
+                                <span>Notifikasi instan ke kasir & pelayan.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Kelola Menu & Harga</strong>
+                                <span>Ubah menu & harga mandiri via panel admin.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Panggil Pelayan Instan</strong>
+                                <span>Pelanggan panggil pelayan via smartphone.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Cetak QR Code Meja</strong>
+                                <span>File QR siap cetak & tempel di setiap meja.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Free Website Landing Page</strong>
+                                <span>Halaman profil bisnis online gratis.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card Checkout / Pemesanan -->
+            <div class="checkout-card">
+                <h3>Ringkasan Langganan</h3>
+                <p style="color: var(--text-muted); font-size: 0.8rem;">Paket Professional Sitenexs UsahaWeb</p>
+                
+                <div class="checkout-price">
+                    Rp 299rb <span>/ bulan</span>
+                </div>
+
+                <ul class="checkout-perks">
+                    <li><i class="fas fa-check"></i> Tanpa potongan komisi penjualan</li>
+                    <li><i class="fas fa-check"></i> Aktivasi cepat & siap pakai</li>
+                    <li><i class="fas fa-check"></i> Support teknis prioritas via WA</li>
+                </ul>
+
+                <!-- Tombol dialihkan ke halaman/modal Pilih Metode Pembayaran -->
+                <a href="https://layanan.sitenexs.site/bayar-dengan/qris/paket-professional" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-credit-card"></i> Pilih Metode Pembayaran
+                </a>
+
+                <div class="guarantee">
+                    <i class="fas fa-shield-alt"></i> Garansi keamanan & pemeliharaan sistem
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sitenexs UsahaWeb. All rights reserved. | Dikelola oleh <a href="https://founder.sitenexs.site" target="_blank">Syafaat Nuryadi</a></p>
+    </footer>
+
+</body>
+</html>
