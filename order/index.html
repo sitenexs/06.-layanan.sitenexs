@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilihan Paket Langganan | Sistem QR Order Cafe & Resto | Sitenexs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="https://sitenexs.site/assets/favicon/favicon.png">
+    <link rel="canonical" href="https://usahaweb.sitenexs.site/berlangganan">
+
+    <meta name="description" content="Pilih paket langganan sistem QR Order Sitenexs untuk cafe dan restoran Anda. Tersedia paket Starter, Professional, dan Enterprise dengan fitur lengkap untuk kasir, pelayan, dan admin.">
+    <meta name="keywords" content="harga langganan qr order, paket qr menu resto, software cafe murah, sistem pos cafe, sitenexs usahaweb">
+    <meta name="author" content="Sitenexs">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-subtle: #e2e8f0;
+            --radius-sm: 0.375rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-full: 9999px;
+            --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            transition: var(--transition);
+        }
+
+        .nav-brand {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.75rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.35rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--border-subtle);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        /* Pricing Header */
+        header.pricing-header {
+            padding: 9rem 5% 4rem 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.4rem 0.85rem;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(37, 99, 235, 0.15);
+        }
+
+        .pricing-header h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .pricing-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Pricing Section */
+        section.pricing-section {
+            padding: 2rem 5% 6rem 5%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-card-header {
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card-header h3 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            min-height: 40px;
+        }
+
+        .price {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-top: 1rem;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.25rem;
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .pricing-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .pricing-features li i {
+            color: var(--success);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .pricing-features li.disabled {
+            color: var(--text-muted);
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        .pricing-features li.disabled i {
+            color: var(--text-muted);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: inherit;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding: 0 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.25rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 4rem 5% 2rem 5%;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            max-width: 350px;
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Responsive Breakpoints */
+        @media(max-width: 992px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--border-subtle);
+                box-shadow: var(--shadow-md);
+                gap: 1rem;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .pricing-header h1 {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav>
+        <a href="index.html" class="nav-brand"><i class="fas fa-utensils"></i>Sitenexs UsahaWeb</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#fitur">Keunggulan</a></li>
+            <li><a href="index.html#cara-kerja">Cara Kerja</a></li>
+            <li><a href="index.html#sistem">Fitur Sistem</a></li>
+            <li><a href="index.html#portal">Demo Sistem</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="https://usahaweb.sitenexs.site/order/pesan" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-qrcode"></i> Coba Demo</a></li>
+            <li><a href="berlangganan.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-crown"></i> Langganan</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Header Berlangganan -->
+    <header class="pricing-header">
+        <div class="pricing-badge">
+            <i class="fas fa-crown"></i> Pilihan Paket Langganan Sitenexs
+        </div>
+        <h1>Investasi Terbaik untuk Operasional Cafe & Resto Anda</h1>
+        <p>Pilih paket sistem QR Order yang sesuai dengan skala bisnis kuliner Anda. Nikmati kemudahan pemesanan dari meja hingga manajemen kasir digital secara real-time.</p>
+    </header>
+
+    <!-- Grid Paket Langganan -->
+    <section class="pricing-section">
+        <div class="pricing-grid">
+            
+            <!-- Paket Starter -->
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3>Paket Starter</h3>
+                    <p>Ideal untuk cafe pemula atau kedai kopi kecil yang ingin mulai digitalisasi.</p>
+                    <div class="price">Rp 149rb <span>/ bulan</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> Sistem QR Order Pelanggan</li>
+                    <li><i class="fas fa-check-circle"></i> Panel Kasir & Pelayan Standar</li>
+                    <li><i class="fas fa-check-circle"></i> Dashboard Admin Produk</li>
+                    <li><i class="fas fa-check-circle"></i> Maksimal 15 Meja QR Code</li>
+                    <li><i class="fas fa-check-circle"></i> Metode Pembayaran QRIS / Tunai</li>
+                    <li class="disabled"><i class="fas fa-xmark"></i> Multi-Cabang / Multi-Outlet</li>
+                    <li class="disabled"><i class="fas fa-xmark"></i> Laporan Keuangan Lanjutan</li>
+                    <li class="disabled"><i class="fas fa-xmark"></i> Custom Domain Bisnis</li>
+                </ul>
+                <a href="https://layanan.sitenexs.site/order?paket=starter" class="btn btn-outline" style="width: 100%;">Pilih Paket Starter</a>
+            </div>
+
+            <!-- Paket Professional (Paling Populer) -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Paling Populer</div>
+                <div class="pricing-card-header">
+                    <h3>Paket Professional</h3>
+                    <p>Solusi lengkap untuk cafe & resto berkembang dengan kapasitas meja lebih banyak.</p>
+                    <div class="price">Rp 299rb <span>/ bulan</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> Sistem QR Order Pelanggan</li>
+                    <li><i class="fas fa-check-circle"></i> Panel Kasir & Pelayan Real-Time</li>
+                    <li><i class="fas fa-check-circle"></i> Dashboard Admin & Manajemen Stok</li>
+                    <li><i class="fas fa-check-circle"></i> Tanpa Batas Meja QR Code</li>
+                    <li><i class="fas fa-check-circle"></i> Integrasi QRIS & Berbagai Dompet Digital</li>
+                    <li><i class="fas fa-check-circle"></i> Laporan Penjualan & Keuangan Bulanan</li>
+                    <li><i class="fas fa-check-circle"></i> Prioritas Support Pelanggan 24/7</li>
+                    <li class="disabled"><i class="fas fa-xmark"></i> Custom Domain Bisnis Sendiri</li>
+                </ul>
+                <a href="https://layanan.sitenexs.site/order?paket=professional" class="btn btn-primary" style="width: 100%;">Pilih Paket Professional</a>
+            </div>
+
+            <!-- Paket Enterprise -->
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <h3>Paket Enterprise</h3>
+                    <p>Eksklusif untuk resto besar, franchise, atau bisnis dengan banyak cabang.</p>
+                    <div class="price">Rp 599rb <span>/ bulan</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> Semua Fitur Paket Professional</li>
+                    <li><i class="fas fa-check-circle"></i> Dukungan Multi-Cabang / Multi-Outlet</li>
+                    <li><i class="fas fa-check-circle"></i> Custom Domain Bisnis (nama-resto.com)</li>
+                    <li><i class="fas fa-check-circle"></i> Analisis Keuangan & Laporan Mendalam</li>
+                    <li><i class="fas fa-check-circle"></i> Akses Akun Staff Tak Terbatas</li>
+                    <li><i class="fas fa-check-circle"></i> Integrasi Sistem POS Lainnya</li>
+                    <li><i class="fas fa-check-circle"></i> Dedicated Account Manager</li>
+                    <li><i class="fas fa-check-circle"></i> Kustomisasi Fitur Tambahan Khusus</li>
+                </ul>
+                <a href="https://layanan.sitenexs.site/order?paket=enterprise" class="btn btn-outline" style="width: 100%;">Pilih Paket Enterprise</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="background: #ffffff; padding: 5rem 5%;">
+        <div style="text-align: center; margin-bottom: 3.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 0.75rem;">Pertanyaan Seputar Langganan</h2>
+            <p style="color: var(--text-muted);">Temukan informasi penting mengenai pembayaran dan aktivasi sistem.</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Bagaimana cara proses aktivasi setelah pembayaran?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    Setelah pembayaran Anda dikonfirmasi, sistem QR Order akan langsung disiapkan oleh tim Sitenexs dalam waktu maksimal 1x24 jam beserta akses login admin dan QR Code meja Anda.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Apakah saya bisa upgrade paket di kemudian hari?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    Tentu saja! Anda dapat melakukan upgrade dari paket Starter ke Professional atau Enterprise kapan saja sesuai dengan perkembangan bisnis cafe atau restoran Anda.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Apakah ada kontrak jangka panjang?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    Tidak ada kontrak jangka panjang. Sistem langganan bersifat bulanan dan Anda dapat berhenti kapan saja tanpa ada penalti tersembunyi.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-brand" style="justify-content: flex-start;"><i class="fas fa-utensils"></i>Sitenexs UsahaWeb</a>
+                <p>Solusi digital untuk membantu bisnis Indonesia berkembang.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasi Utama</h4>
+                <ul>
+                    <li><a href="https://sitenexs.site" target="_blank">Sitenexs</a></li>
+                    <li><a href="index.html#portal">Demo</a></li>
+                    <li><a href="index.html#fitur">Keunggulan</a></li>
+                    <li><a href="berlangganan.html">Paket Harga</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Akses Sistem</h4>
+                <ul>
+                    <li><a href="berlangganan.html">Langganan</a></li>
+                    <li><a href="https://usahaweb.sitenexs.site/order/pesan">Pelanggan</a></li>
+                    <li><a href="https://usahaweb.sitenexs.site/order/kasir">Kasir</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sitenexs UsahaWeb. All rights reserved.</p>
+            <p>Dikelola oleh <a href="https://founder.sitenexs.site" target="_blank">Syafaat Nuryadi</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            if(navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const questionBtn = item.querySelector('.faq-question');
+            questionBtn.addEventListener('click', () => {
+                const currentActive = document.querySelector('.faq-item.active');
+                if(currentActive && currentActive !== item) {
+                    currentActive.classList.remove('active');
+                }
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
