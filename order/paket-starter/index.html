@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Paket Starter | Pesan Dari Meja - Sitenexs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://sitenexs.site/assets/favicon/favicon.png">
+    <link rel="canonical" href="https://usahaweb.sitenexs.site/starter.html">
+    <meta name="description" content="Checkout Paket Starter Sitenexs UsahaWeb untuk sistem QR Order kedai dan angkringan Anda.">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --success: #16a34a;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-subtle: #e2e8f0;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-full: 9999px;
+            --transition: all 0.25s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-size: 0.875rem; /* Ukuran dasar lebih kecil & pas */
+            line-height: 1.5;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 5%;
+        }
+
+        .nav-brand {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--border-subtle);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .checkout-section {
+            padding: 7rem 5% 4rem 5%;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .checkout-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+        }
+
+        .checkout-header {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 1.25rem;
+        }
+
+        .checkout-header h1 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 0.35rem;
+        }
+
+        .checkout-header p {
+            color: var(--text-muted);
+            font-size: 0.825rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.15rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.6rem 0.85rem;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            background-color: #fff;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+
+        .summary-box {
+            background: var(--primary-light);
+            border-radius: var(--radius-md);
+            padding: 1.15rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .summary-row.total {
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--primary);
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 0.6rem;
+            margin-top: 0.6rem;
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 2rem 5%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .checkout-card { padding: 1.25rem; }
+            .checkout-header h1 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://sitenexs.site/" class="nav-brand"><i class="fas fa-utensils"></i>Sitenexs UsahaWeb</a>
+        <a href="paketOrder.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Ganti Paket</a>
+    </nav>
+
+    <section class="checkout-section">
+        <div class="checkout-card">
+            <div class="checkout-header">
+                <h1>Checkout Paket Starter</h1>
+                <p>Lengkapi formulir di bawah ini untuk mengaktifkan sistem QR Order Pesan Dari Meja untuk kedai Anda.</p>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Pesanan Paket Starter berhasil diproses! Anda akan diarahkan ke WhatsApp admin.');">
+                <div class="form-group">
+                    <label for="namaUsaha">Nama Usaha / Kedai</label>
+                    <input type="text" id="namaUsaha" class="form-control" placeholder="Contoh: Kedai Kopi Senja" required>
+                </div>
+                <div class="form-group">
+                    <label for="namaPemilik">Nama Pemilik / Pengelola</label>
+                    <input type="text" id="namaPemilik" class="form-control" placeholder="Contoh: Budi Santoso" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">Nomor WhatsApp Aktif</label>
+                    <input type="tel" id="whatsapp" class="form-control" placeholder="Contoh: 081234567890" required>
+                </div>
+                
+                <div class="summary-box">
+                    <div class="summary-row">
+                        <span>Paket Langganan Starter (1 Bulan)</span>
+                        <span>Rp 149.000</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Biaya Setup & Aktivasi</span>
+                        <span>Gratis</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total Pembayaran</span>
+                        <span>Rp 149.000</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.85rem;">
+                    <i class="fab fa-whatsapp"></i> Lanjutkan ke Pembayaran WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sitenexs UsahaWeb. All rights reserved. | Dikelola oleh <a href="https://founder.sitenexs.site" target="_blank">Syafaat Nuryadi</a></p>
+    </footer>
+</body>
+</html>
