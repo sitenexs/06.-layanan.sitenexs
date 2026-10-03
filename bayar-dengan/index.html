@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Metode Pembayaran | Sitenexs UsahaWeb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://sitenexs.site/assets/favicon/favicon.png">
+    <link rel="canonical" href="https://usahaweb.sitenexs.site/Metode-pembayaran.html">
+    <meta name="description" content="Pilih metode pembayaran instan untuk aktivasi layanan Sitenexs UsahaWeb.">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --success: #16a34a;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-subtle: #e2e8f0;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-full: 9999px;
+            --transition: all 0.25s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 5%;
+        }
+
+        .nav-brand {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--border-subtle);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .payment-section {
+            padding: 7rem 5% 4rem 5%;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .payment-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+        }
+
+        .payment-header {
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 1.25rem;
+        }
+
+        .payment-header h1 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 0.35rem;
+        }
+
+        .payment-header p {
+            color: var(--text-muted);
+            font-size: 0.825rem;
+        }
+
+        .order-summary-box {
+            background: var(--primary-light);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.15rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .order-summary-box h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .order-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4rem 1rem;
+            font-size: 0.8rem;
+            color: var(--text-main);
+        }
+
+        @media(max-width: 480px) {
+            .order-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .channel-category {
+            margin-bottom: 1.25rem;
+        }
+
+        .channel-category h4 {
+            font-size: 0.825rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .channel-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+        }
+
+        @media(max-width: 480px) {
+            .channel-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .channel-card {
+            border: 1.5px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 0.75rem 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+            background: #fff;
+        }
+
+        .channel-card:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .channel-card input[type="radio"] {
+            accent-color: var(--primary);
+            width: 1rem;
+            height: 1rem;
+            cursor: pointer;
+        }
+
+        .channel-detail {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .channel-detail .name {
+            font-weight: 700;
+            font-size: 0.825rem;
+            color: var(--text-main);
+        }
+
+        .channel-detail .fee {
+            font-size: 0.725rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
+            padding: 2rem 5%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://sitenexs.site/" class="nav-brand"><i class="fas fa-utensils"></i>Sitenexs UsahaWeb</a>
+        <a href="https://layanan.sitenexs.site/order/paket-starter" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Kembali ke Checkout</a>
+    </nav>
+
+    <section class="payment-section">
+        <div class="payment-card">
+            <div class="payment-header">
+                <h1>Pilih Metode Pembayaran</h1>
+                <p>Silakan pilih kanal pembayaran pilihan Anda untuk menyelesaikan transaksi.</p>
+            </div>
+
+            <!-- Ringkasan Pesanan dari Session -->
+            <div class="order-summary-box">
+                <h3><i class="fas fa-receipt"></i> Detail Pesanan Anda</h3>
+                <div class="order-info-grid" id="orderSummaryContainer">
+                    <div><strong>Paket:</strong> <span id="lblPaket">Paket Starter</span></div>
+                    <div><strong>Total:</strong> <span id="lblHarga" style="color: var(--primary); font-weight: 700;">Rp 149.000</span></div>
+                    <div><strong>Usaha:</strong> <span id="lblUsaha">-</span></div>
+                    <div><strong>Pemilik:</strong> <span id="lblPemilik">-</span></div>
+                </div>
+            </div>
+
+            <form onsubmit="processPayment(event)">
+                <!-- QRIS / Instan -->
+                <div class="channel-category">
+                    <h4>QRIS & Instant Payment</h4>
+                    <div class="channel-options">
+                        <label class="channel-card">
+                            <input type="radio" name="paymentChannel" value="qris" checked>
+                            <div class="channel-detail">
+                                <span class="name"><i class="fas fa-qrcode" style="color: var(--primary);"></i> QRIS All Payment</span>
+                                <span class="fee">Scan pakai GoPay, OVO, Dana, BCA, dll</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Virtual Account -->
+                <div class="channel-category">
+                    <h4>Virtual Account Bank</h4>
+                    <div class="channel-options">
+                        <label class="channel-card">
+                            <input type="radio" name="paymentChannel" value="va_bca">
+                            <div class="channel-detail">
+                                <span class="name">BCA Virtual Account</span>
+                                <span class="fee">Otomatis Terverifikasi</span>
+                            </div>
+                        </label>
+                        <label class="channel-card">
+                            <input type="radio" name="paymentChannel" value="va_mandiri">
+                            <div class="channel-detail">
+                                <span class="name">Mandiri Virtual Account</span>
+                                <span class="fee">Otomatis Terverifikasi</span>
+                            </div>
+                        </label>
+                        <label class="channel-card">
+                            <input type="radio" name="paymentChannel" value="va_bni">
+                            <div class="channel-detail">
+                                <span class="name">BNI Virtual Account</span>
+                                <span class="fee">Otomatis Terverifikasi</span>
+                            </div>
+                        </label>
+                        <label class="channel-card">
+                            <input type="radio" name="paymentChannel" value="va_bri">
+                            <div class="channel-detail">
+                                <span class="name">BRI Virtual Account</span>
+                                <span class="fee">Otomatis Terverifikasi</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- E-Wallet -->
+                <div class="channel-category">
+                    <h4>E-Wallet</h4>
+                    <div class="channel-options">
+                        <label class="channel-card">
+                            <input type="radio" name="paymentChannel" value="ewallet_dana">
+                            <div class="channel-detail">
+                                <span class="name">DANA</span>
+                                <span class="fee">Instant E-Wallet</span>
+                            </div>
+                        </label>
+                        <label class="channel-card">
+                            <input type="radio" name="paymentChannel" value="ewallet_gopay">
+                            <div class="channel-detail">
+                                <span class="name">GoPay</span>
+                                <span class="fee">Instant E-Wallet</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" onclick="processPayment()" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.85rem; margin-top: 1rem;">
+                    <i class="fas fa-lock"></i> Bayar Sekarang (Rp 149.000)
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sitenexs UsahaWeb. All rights reserved. | Dikelola oleh <a href="https://founder.sitenexs.site" target="_blank">Syafaat Nuryadi</a></p>
+    </footer>
+
+    <script>
+        // Load data dari sessionStorage
+        const rawData = sessionStorage.getItem('sitenexs_order');
+        let orderData = rawData ? JSON.parse(rawData) : {
+            paket: 'Paket Starter - Pesan Dari Meja',
+            harga: 149000,
+            namaUsaha: 'Kedai Contoh',
+            namaPemilik: 'Pengelola',
+            whatsapp: '081234567890'
+        };
+
+        document.getElementById('lblPaket').textContent = orderData.paket;
+        document.getElementById('lblHarga').textContent = 'Rp ' + orderData.harga.toLocaleString('id-ID');
+        document.getElementById('lblUsaha').textContent = orderData.namaUsaha;
+        document.getElementById('lblPemilik').textContent = orderData.namaPemilik;
+
+        function processPayment() {
+            const selectedChannel = document.querySelector('input[name="paymentChannel"]:checked').value;
+            alert(`Memproses pembayaran via ${selectedChannel.toUpperCase()} untuk usaha ${orderData.namaUsaha}. Anda akan diarahkan ke halaman instruksi pembayaran.`);
+            // Di sini dapat diintegrasikan dengan Payment Gateway (Midtrans/Xendit/Tripay dll)
+        }
+    </script>
+</body>
+</html>
