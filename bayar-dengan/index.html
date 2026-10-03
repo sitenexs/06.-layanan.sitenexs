@@ -146,14 +146,8 @@
 
         .channel-options {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 0.6rem;
-        }
-
-        @media(max-width: 480px) {
-            .channel-options {
-                grid-template-columns: 1fr;
-            }
         }
 
         .channel-card {
@@ -241,62 +235,6 @@
                     </div>
                 </div>
 
-                <!-- Virtual Account (Disabled) -->
-                <div class="channel-category">
-                    <h4>Virtual Account Bank</h4>
-                    <div class="channel-options">
-                        <label class="channel-card" style="opacity: 0.6; cursor: not-allowed; background: #f1f5f9;">
-                            <input type="radio" name="paymentChannel" value="va_bca" disabled>
-                            <div class="channel-detail">
-                                <span class="name">BCA Virtual Account <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">(Akan Datang)</span></span>
-                                <span class="fee">Belum tersedia</span>
-                            </div>
-                        </label>
-                        <label class="channel-card" style="opacity: 0.6; cursor: not-allowed; background: #f1f5f9;">
-                            <input type="radio" name="paymentChannel" value="va_mandiri" disabled>
-                            <div class="channel-detail">
-                                <span class="name">Mandiri Virtual Account <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">(Akan Datang)</span></span>
-                                <span class="fee">Belum tersedia</span>
-                            </div>
-                        </label>
-                        <label class="channel-card" style="opacity: 0.6; cursor: not-allowed; background: #f1f5f9;">
-                            <input type="radio" name="paymentChannel" value="va_bni" disabled>
-                            <div class="channel-detail">
-                                <span class="name">BNI Virtual Account <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">(Akan Datang)</span></span>
-                                <span class="fee">Belum tersedia</span>
-                            </div>
-                        </label>
-                        <label class="channel-card" style="opacity: 0.6; cursor: not-allowed; background: #f1f5f9;">
-                            <input type="radio" name="paymentChannel" value="va_bri" disabled>
-                            <div class="channel-detail">
-                                <span class="name">BRI Virtual Account <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">(Akan Datang)</span></span>
-                                <span class="fee">Belum tersedia</span>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- E-Wallet -->
-                <div class="channel-category">
-                    <h4>E-Wallet</h4>
-                    <div class="channel-options">
-                        <label class="channel-card">
-                            <input type="radio" name="paymentChannel" value="ewallet_dana">
-                            <div class="channel-detail">
-                                <span class="name">DANA</span>
-                                <span class="fee">Instant E-Wallet</span>
-                            </div>
-                        </label>
-                        <label class="channel-card">
-                            <input type="radio" name="paymentChannel" value="ewallet_gopay">
-                            <div class="channel-detail">
-                                <span class="name">GoPay</span>
-                                <span class="fee">Instant E-Wallet</span>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
                 <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.85rem; margin-top: 1rem;">
                     <i class="fas fa-lock"></i> Bayar Sekarang (Rp 149.000)
                 </button>
@@ -326,17 +264,11 @@
         orderData.paymentChannel = selectedChannel;
         sessionStorage.setItem('sitenexs_order', JSON.stringify(orderData));
 
-        // Arahkan ke halaman pembayaran yang sesuai
+        // Arahkan ke halaman qris.html
         if (selectedChannel === 'qris') {
-            window.location.href = 'https://layanan.sitenexs.site/bayar-dengan/qris';
-        } else if (selectedChannel === 'ewallet_dana' || selectedChannel === 'ewallet_gopay') {
-            window.location.href = 'dana.html';
-        } else {
-            alert(`Memproses pembayaran via ${selectedChannel.toUpperCase()} untuk total Rp ${orderData.harga.toLocaleString('id-ID')}. Anda akan diarahkan ke sistem pembayaran.`);
+            window.location.href = 'qris.html';
         }
     }
-</script>
-
-
+    </script>
 </body>
 </html>
