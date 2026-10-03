@@ -309,21 +309,31 @@
     </footer>
 
     <script>
-        function processPayment(event) {
-            event.preventDefault();
-            const checkedInput = document.querySelector('input[name="paymentChannel"]:checked');
-            
-            if (!checkedInput) {
-                alert('Silakan pilih metode pembayaran yang tersedia terlebih dahulu.');
-                return;
-            }
+    function processPayment(event) {
+        event.preventDefault();
+        const checkedInput = document.querySelector('input[name="paymentChannel"]:checked');
+        
+        if (!checkedInput) {
+            alert('Silakan pilih metode pembayaran yang tersedia terlebih dahulu.');
+            return;
+        }
 
-            const selectedChannel = checkedInput.value;
-            const rawData = sessionStorage.getItem('sitenexs_order');
-            let orderData = rawData ? JSON.parse(rawData) : { paket: 'Paket Starter', harga: 149000 };
+        const selectedChannel = checkedInput.value;
+        const rawData = sessionStorage.getItem('sitenexs_order');
+        let orderData = rawData ? JSON.parse(rawData) : { paket: 'Paket Starter', harga: 149000 };
 
+        // Simpan metode pembayaran yang dipilih ke session storage
+        orderData.paymentChannel = selectedChannel;
+        sessionStorage.setItem('sitenexs_order', JSON.stringify(orderData));
+
+        // Jika memilih QRIS, arahkan ke halaman qris.html
+        if (selectedChannel === 'qris') {
+            window.location.href = 'qris.html';
+        } else {
             alert(`Memproses pembayaran via ${selectedChannel.toUpperCase()} untuk total Rp ${orderData.harga.toLocaleString('id-ID')}. Anda akan diarahkan ke sistem pembayaran.`);
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
