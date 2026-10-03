@@ -326,14 +326,17 @@
         orderData.paymentChannel = selectedChannel;
         sessionStorage.setItem('sitenexs_order', JSON.stringify(orderData));
 
-        // Jika memilih QRIS, arahkan ke halaman qris.html
+        // Arahkan ke halaman pembayaran yang sesuai
         if (selectedChannel === 'qris') {
             window.location.href = 'https://layanan.sitenexs.site/bayar-dengan/qris';
+        } else if (selectedChannel === 'ewallet_dana' || selectedChannel === 'ewallet_gopay') {
+            window.location.href = 'dana.html';
         } else {
             alert(`Memproses pembayaran via ${selectedChannel.toUpperCase()} untuk total Rp ${orderData.harga.toLocaleString('id-ID')}. Anda akan diarahkan ke sistem pembayaran.`);
         }
     }
 </script>
+
 
 </body>
 </html>
