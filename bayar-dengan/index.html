@@ -357,9 +357,9 @@
         let orderData = rawData ? JSON.parse(rawData) : {
             paket: 'Paket Starter - Pesan Dari Meja',
             harga: 149000,
-            namaUsaha: 'Kedai Contoh',
-            namaPemilik: 'Pengelola',
-            whatsapp: '081234567890'
+            namaUsaha: usaha,
+            namaPemilik: pemilik,
+            whatsapp: wa
         };
 
         document.getElementById('lblPaket').textContent = orderData.paket;
