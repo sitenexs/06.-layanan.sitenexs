@@ -131,38 +131,6 @@
             font-size: 0.825rem;
         }
 
-        .order-summary-box {
-            background: var(--primary-light);
-            border-radius: var(--radius-md);
-            padding: 1rem 1.15rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(37, 99, 235, 0.1);
-        }
-
-        .order-summary-box h3 {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .order-info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.4rem 1rem;
-            font-size: 0.8rem;
-            color: var(--text-main);
-        }
-
-        @media(max-width: 480px) {
-            .order-info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .channel-category {
             margin-bottom: 1.25rem;
         }
@@ -258,17 +226,6 @@
                 <p>Silakan pilih kanal pembayaran pilihan Anda untuk menyelesaikan transaksi.</p>
             </div>
 
-            <!-- Ringkasan Pesanan dari Session -->
-            <div class="order-summary-box">
-                <h3><i class="fas fa-receipt"></i> Detail Pesanan Anda</h3>
-                <div class="order-info-grid" id="orderSummaryContainer">
-                    <div><strong>Paket:</strong> <span id="lblPaket">Paket Starter</span></div>
-                    <div><strong>Total:</strong> <span id="lblHarga" style="color: var(--primary); font-weight: 700;">Rp 149.000</span></div>
-                    <div><strong>Usaha:</strong> <span id="lblUsaha">-</span></div>
-                    <div><strong>Pemilik:</strong> <span id="lblPemilik">-</span></div>
-                </div>
-            </div>
-
             <form onsubmit="processPayment(event)">
                 <!-- QRIS / Instan -->
                 <div class="channel-category">
@@ -284,36 +241,36 @@
                     </div>
                 </div>
 
-                <!-- Virtual Account -->
+                <!-- Virtual Account (Disabled) -->
                 <div class="channel-category">
                     <h4>Virtual Account Bank</h4>
                     <div class="channel-options">
-                        <label class="channel-card">
-                            <input type="radio" name="paymentChannel" value="va_bca">
+                        <label class="channel-card" style="opacity: 0.6; cursor: not-allowed; background: #f1f5f9;">
+                            <input type="radio" name="paymentChannel" value="va_bca" disabled>
                             <div class="channel-detail">
-                                <span class="name">BCA Virtual Account</span>
-                                <span class="fee">Otomatis Terverifikasi</span>
+                                <span class="name">BCA Virtual Account <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">(Akan Datang)</span></span>
+                                <span class="fee">Belum tersedia</span>
                             </div>
                         </label>
-                        <label class="channel-card">
-                            <input type="radio" name="paymentChannel" value="va_mandiri">
+                        <label class="channel-card" style="opacity: 0.6; cursor: not-allowed; background: #f1f5f9;">
+                            <input type="radio" name="paymentChannel" value="va_mandiri" disabled>
                             <div class="channel-detail">
-                                <span class="name">Mandiri Virtual Account</span>
-                                <span class="fee">Otomatis Terverifikasi</span>
+                                <span class="name">Mandiri Virtual Account <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">(Akan Datang)</span></span>
+                                <span class="fee">Belum tersedia</span>
                             </div>
                         </label>
-                        <label class="channel-card">
-                            <input type="radio" name="paymentChannel" value="va_bni">
+                        <label class="channel-card" style="opacity: 0.6; cursor: not-allowed; background: #f1f5f9;">
+                            <input type="radio" name="paymentChannel" value="va_bni" disabled>
                             <div class="channel-detail">
-                                <span class="name">BNI Virtual Account</span>
-                                <span class="fee">Otomatis Terverifikasi</span>
+                                <span class="name">BNI Virtual Account <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">(Akan Datang)</span></span>
+                                <span class="fee">Belum tersedia</span>
                             </div>
                         </label>
-                        <label class="channel-card">
-                            <input type="radio" name="paymentChannel" value="va_bri">
+                        <label class="channel-card" style="opacity: 0.6; cursor: not-allowed; background: #f1f5f9;">
+                            <input type="radio" name="paymentChannel" value="va_bri" disabled>
                             <div class="channel-detail">
-                                <span class="name">BRI Virtual Account</span>
-                                <span class="fee">Otomatis Terverifikasi</span>
+                                <span class="name">BRI Virtual Account <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">(Akan Datang)</span></span>
+                                <span class="fee">Belum tersedia</span>
                             </div>
                         </label>
                     </div>
@@ -340,7 +297,7 @@
                     </div>
                 </div>
 
-                <button type="button" onclick="processPayment()" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.85rem; margin-top: 1rem;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.85rem; margin-top: 1rem;">
                     <i class="fas fa-lock"></i> Bayar Sekarang (Rp 149.000)
                 </button>
             </form>
@@ -352,25 +309,20 @@
     </footer>
 
     <script>
-        // Load data dari sessionStorage
-        const rawData = sessionStorage.getItem('sitenexs_order');
-        let orderData = rawData ? JSON.parse(rawData) : {
-            paket: 'Paket Starter - Pesan Dari Meja',
-            harga: 149000,
-            namaUsaha = usaha,
-            namaPemilik = pemilik,
-            whatsapp = wa
-        };
+        function processPayment(event) {
+            event.preventDefault();
+            const checkedInput = document.querySelector('input[name="paymentChannel"]:checked');
+            
+            if (!checkedInput) {
+                alert('Silakan pilih metode pembayaran yang tersedia terlebih dahulu.');
+                return;
+            }
 
-        document.getElementById('lblPaket').textContent = orderData.paket;
-        document.getElementById('lblHarga').textContent = 'Rp ' + orderData.harga.toLocaleString('id-ID');
-        document.getElementById('lblUsaha').textContent = orderData.namaUsaha;
-        document.getElementById('lblPemilik').textContent = orderData.namaPemilik;
+            const selectedChannel = checkedInput.value;
+            const rawData = sessionStorage.getItem('sitenexs_order');
+            let orderData = rawData ? JSON.parse(rawData) : { paket: 'Paket Starter', harga: 149000 };
 
-        function processPayment() {
-            const selectedChannel = document.querySelector('input[name="paymentChannel"]:checked').value;
-            alert(`Memproses pembayaran via ${selectedChannel.toUpperCase()} untuk usaha ${orderData.namaUsaha}. Anda akan diarahkan ke halaman instruksi pembayaran.`);
-            // Di sini dapat diintegrasikan dengan Payment Gateway (Midtrans/Xendit/Tripay dll)
+            alert(`Memproses pembayaran via ${selectedChannel.toUpperCase()} untuk total Rp ${orderData.harga.toLocaleString('id-ID')}. Anda akan diarahkan ke sistem pembayaran.`);
         }
     </script>
 </body>
