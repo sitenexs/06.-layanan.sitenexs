@@ -34,7 +34,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-body);
             color: var(--text-main);
-            font-size: 0.875rem; /* Ukuran dasar lebih kecil & pas */
+            font-size: 0.875rem;
             line-height: 1.5;
         }
 
@@ -115,7 +115,7 @@
         }
 
         .checkout-header {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             border-bottom: 1px solid var(--border-subtle);
             padding-bottom: 1.25rem;
         }
@@ -129,6 +129,52 @@
         .checkout-header p {
             color: var(--text-muted);
             font-size: 0.825rem;
+        }
+
+        /* Fitur Paket Box */
+        .features-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.15rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-box h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .features-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.4rem;
+        }
+
+        @media(min-width: 540px) {
+            .features-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .features-list li {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .features-list li i {
+            color: var(--success);
+            margin-top: 0.2rem;
+            flex-shrink: 0;
         }
 
         .form-group {
@@ -209,7 +255,7 @@
 <body>
     <nav>
         <a href="https://sitenexs.site/" class="nav-brand"><i class="fas fa-utensils"></i>Sitenexs UsahaWeb</a>
-        <a href="paketOrder.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Ganti Paket</a>
+        <a href="https://layanan.sitenexs.site/order" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Ganti Paket</a>
     </nav>
 
     <section class="checkout-section">
@@ -218,6 +264,20 @@
                 <h1>Checkout Paket Starter</h1>
                 <p>Lengkapi formulir di bawah ini untuk mengaktifkan sistem QR Order Pesan Dari Meja untuk kedai Anda.</p>
             </div>
+
+            <!-- Ringkasan Layanan / Fitur Paket Starter -->
+            <div class="features-box">
+                <h3><i class="fas fa-check-circle" style="color: var(--primary);"></i> Yang Anda dapatkan di Paket Starter:</h3>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Sistem QR Order Pesan Dari Meja</li>
+                    <li><i class="fas fa-check"></i> Menu Digital Berbasis Web (Tanpa Install)</li>
+                    <li><i class="fas fa-check"></i> Manajemen Pesanan & Notifikasi WhatsApp</li>
+                    <li><i class="fas fa-check"></i> Desain & Cetak Template QR Meja (Maks. 10 Meja)</li>
+                    <li><i class="fas fa-check"></i> Gratis Setup, Domain Pendukung & Hosting</li>
+                    <li><i class="fas fa-check"></i> Bantuan Teknis / Support Selama Langganan</li>
+                </ul>
+            </div>
+
             <form onsubmit="event.preventDefault(); alert('Pesanan Paket Starter berhasil diproses! Anda akan diarahkan ke WhatsApp admin.');">
                 <div class="form-group">
                     <label for="namaUsaha">Nama Usaha / Kedai</label>
