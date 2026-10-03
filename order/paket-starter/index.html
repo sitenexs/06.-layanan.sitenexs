@@ -205,6 +205,33 @@
             box-shadow: 0 0 0 3px var(--primary-light);
         }
 
+        .payment-info-box {
+            background: #f8fafc;
+            border: 1.5px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 0.85rem 1rem;
+            margin-bottom: 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .payment-info-box i {
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .payment-info-box .title {
+            font-weight: 700;
+            font-size: 0.825rem;
+            color: var(--text-main);
+        }
+
+        .payment-info-box .desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
         .summary-box {
             background: var(--primary-light);
             border-radius: var(--radius-md);
@@ -262,7 +289,7 @@
         <div class="checkout-card">
             <div class="checkout-header">
                 <h1>Checkout Paket Starter</h1>
-                <p>Lengkapi formulir di bawah ini untuk mengaktifkan sistem QR Order Pesan Dari Meja untuk kedai Anda.</p>
+                <p>Lengkapi formulir di bawah ini untuk melanjutkan ke sistem pembayaran otomatis sistem QR Order Pesan Dari Meja.</p>
             </div>
 
             <!-- Ringkasan Layanan / Fitur Paket Starter -->
@@ -272,13 +299,13 @@
                     <li><i class="fas fa-check"></i> Sistem QR Order Pesan Dari Meja</li>
                     <li><i class="fas fa-check"></i> Dashboard Kasir & Pelayan Real-time</li>
                     <li><i class="fas fa-check"></i> Panel Admin Kelola Menu</li>
-                    <li><i class="fas fa-check"></i> Desain & Cetak Template QR Meja.</li>
+                    <li><i class="fas fa-check"></i> Desain & Cetak Template QR Meja</li>
                     <li><i class="fas fa-check"></i> Notifikasi Suara Pesanan Masuk</li>
                     <li><i class="fas fa-check"></i> Bantuan Teknis / Support Selama Langganan</li>
                 </ul>
             </div>
 
-            <form onsubmit="event.preventDefault(); alert('Pesanan Paket Starter berhasil diproses! Anda akan diarahkan ke WhatsApp admin.');">
+            <form onsubmit="handleCheckout(event)">
                 <div class="form-group">
                     <label for="namaUsaha">Nama Usaha / Kedai</label>
                     <input type="text" id="namaUsaha" class="form-control" placeholder="Contoh: Kedai Kopi Senja" required>
@@ -290,6 +317,18 @@
                 <div class="form-group">
                     <label for="whatsapp">Nomor WhatsApp Aktif</label>
                     <input type="tel" id="whatsapp" class="form-control" placeholder="Contoh: 081234567890" required>
+                </div>
+
+                <!-- Informasi Metode Pembayaran Otomatis -->
+                <div class="form-group">
+                    <label>Metode Pembayaran</label>
+                    <div class="payment-info-box">
+                        <i class="fas fa-wallet"></i>
+                        <div>
+                            <div class="title">Payment Gateway Otomatis</div>
+                            <div class="desc">Tersedia QRIS, Virtual Account, E-Wallet & Transfer Bank</div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="summary-box">
@@ -307,8 +346,8 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.85rem;">
-                    <i class="fab fa-whatsapp"></i> Lanjutkan ke Pembayaran WhatsApp
+                <button type="submit" class="btn btn-primary" id="btnSubmit" style="width: 100%; padding: 0.75rem; font-size: 0.85rem;">
+                    <i class="fas fa-arrow-right"></i> Lanjutkan Pembayaran
                 </button>
             </form>
         </div>
@@ -317,5 +356,25 @@
     <footer>
         <p>&copy; 2026 Sitenexs UsahaWeb. All rights reserved. | Dikelola oleh <a href="https://founder.sitenexs.site" target="_blank">Syafaat Nuryadi</a></p>
     </footer>
+
+    <script>
+        function handleCheckout(event) {
+            event.preventDefault();
+            const usaha = document.getElementById('namaUsaha').value;
+            const pemilik = document.getElementById('namaPemilik').value;
+            const wa = document.getElementById('whatsapp').value;
+
+            // Simpan data ke sessionStorage untuk diteruskan ke halaman pembayaran
+            const orderData = {
+                paket: 'Paket Starter - Pesan Dari Meja',
+                harga: 149000,
+                namaUsaha: usaha,
+                namaPemilik: pemilik,
+                whatsapp: wa
+            };
+            sessionStorage.setItem('sitenexs_order', JSON.stringify(orderData));
+            window.location.href = 'Metode-pembayaran.html';
+        }
+    </script>
 </body>
 </html>
